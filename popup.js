@@ -41,7 +41,7 @@ shortenBtn.addEventListener('click', async () => {
 
     copyBtn.onclick = () => {
       navigator.clipboard.writeText(shortUrl);
-      copyBtn.textContent = "✅ Copied!";
+      copyBtn.textContent = "Copied!";
       copyBtn.classList.add('copied');
       setTimeout(() => {
         copyBtn.textContent = "Copy";

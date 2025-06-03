@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Instant URL Shortener",
+  "version": "1.0",
+  "description": "Shorten the current page URL instantly.",
+  "permissions": ["activeTab", "clipboardWrite"],
+  "host_permissions": [
+    "https://tinyurl.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

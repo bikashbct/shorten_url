@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shorten URL</title>
+  <style>
+    @font-face {
+      font-family: 'FantasqueSansMNerdFont';
+      src: url('FantasqueSansMNerdFont-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    body {
+      font-family: 'FantasqueSansMNerdFont', monospace, Arial, sans-serif;
+      background: #f5f7fa;
+      min-width: 260px;
+      padding: 18px 16px 16px 16px;
+      border-radius: 14px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      color: #222;
+    }
+    #shorten-btn {
+      background: #0074d9;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: 100%;
+      font-family: inherit;
+    }
+    #shorten-btn:hover {
+      background: #005fa3;
+    }
+    #short-url {
+      margin-top: 18px;
+      word-break: break-all;
+      color: #1a73e8;
+      font-size: 1.1rem;
+      text-align: center;
+      font-family: inherit;
+    }
+    #copy-btn {
+      margin-top: 12px;
+      background: #2ecc40;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 18px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: none;
+      width: 100%;
+      font-family: inherit;
+    }
+    #copy-btn.copied {
+      background: #00b894;
+    }
+    #error {
+      color: #e74c3c;
+      margin-top: 14px;
+      text-align: center;
+      font-size: 0.97rem;
+      font-family: inherit;
+    }
+    #spinner {
+      display: none;
+      margin: 14px auto 0 auto;
+      border: 3px solid #eee;
+      border-top: 3px solid #0074d9;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
+    }
+  </style>
+</head>
+<body>
+  <button id="shorten-btn">Shorten Current URL</button>
+  <div id="spinner"></div>
+  <div id="short-url"></div>
+  <button id="copy-btn">Copy</button>
+  <div id="error"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
